@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:820px)">
+    <script src="https://kit.fontawesome.com/1a1e00d185.js" crossorigin="anonymous"></script>
+    <title>Calculo de áreas</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-bar__items"> <a href=""><i class="fa-solid fa-house"></i> Home </a></li> 
+            </ul>
+        </nav>  
+
+        <div class="subMenu">
+
+            <div class="subMenu__sections" onclick="location.href='./areas.html'">
+                <!-- <a href="./areas.html">Figuras Geometricas</a> -->
+                <i class="fa-solid fa-ruler"></i> 
+                <span>Figuras geométricas</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="window.location='./descuentos.html'">
+                <i class="fa-solid fa-percent"></i> 
+                <span>Porcentajes y descuentos</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="location.href='./promedios.html'">
+                <i class="fa-regular fa-rectangle-list"></i>
+                <span>Media moda y mediana</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="window.location='./salarios.html'">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                <span>Análisis  salarial</span>
+            </div>
+
+        </div>   
+        
+    </header>
+    
+    <main class="container">
+
+        <section class="content">
+            
+           <section class="content-card">
+
+                <div class="content-head">
+
+                    <h1> Calcular el área y el perimetro de un cuadrado </h1>
+
+                </div>
+
+                <div class="content-body">
+
+                    <div class="form-container">                        
+
+                        <form>
+
+                            <label for="ladoCuadrado" class="label">
+                                <span>
+                                    Ingresa el tamaño del lado del cuadrado
+                                </span>
+                            </label>
+
+                            <input type="number" class="inputText medCuadrado" id="ladoCuadrado" required/>
+                     
+                            <button type="button" class="primary-button" onclick="areaPerimetroCuadrado()">Callcular</button>
+
+                            <button type="button" class="secondary-button" onclick="cleanSquare()" >Nuevo Calculo</button>
+
+                        </form>
+                    </div>
+
+                    <div class="sectionresult">
+                        <h3>Perimetro</h3>
+                        <span id="perimetroCuadrado"></span>
+                    </div>
+            
+                    <div class="sectionresult">
+                        <h3>Área</h3>
+                        <span id="areaCuadrado"></span>
+                    </div>
+
+                </section>
+
+                <section class="content-card">
+
+                    <div class="content-head">
+                        <h1>Calcular el perímetro y área de un triangulo</h1>
+                    </div>
+
+                    <div class="content-body">
+                        
+                        <div class="form-container">                        
+
+                            <form>
+                                <label for="datos" class="label">
+                                    <span id="sp">Que desea calcular</span>
+                                </label>
+
+                                <select name="tipoCalculo" id="calcular" class="inputText tipoCalculo" onchange="tCalculo()">
+                                    <option value="perimetro" >PerÍmetro</option>
+                                    <option value="area" >Área</option>
+                                </select>
+                                
+                                <label for="lado1" class="label">
+                                    <span id="spLado1" >Lado 1</span>
+                                </label>
+                                <input type="number" id="lado1" class="medTriangulo inputText" required>
+
+
+                                <label for="lado2" class="label">
+                                    <span id="spLado2">Lado 2</span>
+                                </label>
+                                <input type="number" id="lado2" class="medTriangulo inputText" required>
+
+
+                                <label for="lado3" class="label">
+                                    <span id="spLado3"> Lado 3</span>
+                                </label>
+                                <input type="number" id="lado3"  class="medTriangulo inputText" required>
+
+                                <button type="button" class="primary-button" onclick="areaPerimetroTriangulo()"> Calcular </button>
+
+                                <button type="button" class="secondary-button" onclick="cleanTriangle()">
+                                    Nuevo calculo
+                                </button>
+
+                            </form>
+                        </div>
+     
+                        <section class="sectionresult">
+                            <h3 id="calc">Perímetro</h3>
+                            <span id="perimetroTriangulo"></span>
+                        </section>
+                        
+
+                    </div>
+
+                </section>  
+
+                <section class="content-card">
+
+                    <div class="content-head">
+                        <h1>Calcular el perímetro y área de un circulo</h1>
+                    </div>
+
+                    <div class="content-body">
+                        
+                        <div class="form-container">                        
+
+                            <form>
+                                
+                                <label for="lado1" class="label">
+                                    <span id="spLado1" >Radio</span>
+                                </label>
+                                <input type="number" id="radio" class="medTadio inputText" required>
+
+                                <button type="button" class="primary-button" onclick="areaPerimetrocirculo()"> Calcular </button>
+
+                                <button type="button" class="secondary-button" onclick="cleanCircle()">
+                                    Nuevo calculo
+                                </button>
+
+                            </form>
+                        </div>
+     
+                        <section class="sectionresult">
+                            <h3 id="calc">Perímetro</h3>
+                            <span id="perimetroCirculo"></span>
+                        </section>
+
+                             
+                        <section class="sectionresult">
+                            <h3 id="calc">Área</h3>
+                            <span id="areaCirculo"></span>
+                        </section>
+                        
+
+                    </div>
+
+                </section>  
+
+        </section>
+    
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="./js/figuras.js"></script>
+
+</body>
+</html>

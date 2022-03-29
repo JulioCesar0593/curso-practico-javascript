@@ -1,0 +1,47 @@
+.subMenu__sections{
+    width: 25%;
+}
+
+/* .content-card{
+    width: 90rem;
+    margin: auto;
+} */
+
+
+.content-card{
+    width: 40rem;
+    margin: 2rem auto auto auto;
+    display: flex;
+} 
+
+.content-head{
+    width: 40rem;
+    height: 10rem;    
+}
+
+.content-body{
+    width: 40rem;    
+}
+
+.inputValores{
+    width: 85%;
+}
+
+.medTriangulo{
+    width: 8rem;
+}
+
+.tipoCalculo{
+    width:50%;
+}
+
+.form-container{
+    width: 95%;
+    margin: auto;
+}
+
+
+.arrayDatos{
+    width: 95%;
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:820px)">
+    <script src="https://kit.fontawesome.com/1a1e00d185.js" crossorigin="anonymous"></script>
+    <title>Calculo de áreas</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-bar__items"> <a href=""><i class="fa-solid fa-house"></i> Home </a></li> 
+            </ul>
+        </nav>  
+
+        <div class="subMenu">
+
+            <div class="subMenu__sections" onclick="location.href='./areas.html'">
+                <!-- <a href="./areas.html">Figuras Geometricas</a> -->
+                <i class="fa-solid fa-ruler"></i> 
+                <span>Figuras geométricas</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="window.location='./descuentos.html'">
+                <i class="fa-solid fa-percent"></i> 
+                <span>Porcentajes y descuentos</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="location.href='./promedios.html'">
+                <i class="fa-regular fa-rectangle-list"></i>
+                <span>Media moda y mediana</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="window.location='./salarios.html'">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                <span>Análisis  salarial</span>
+            </div>
+
+        </div>  
+        
+    </header>
+    
+    <main class="container">
+
+        <section class="content">
+            
+           <section class="content-card">
+
+                <div class="content-head">
+
+                    <h1> Calculadora de descuentos </h1>
+
+                </div>
+
+                <div class="content-body">
+
+                    <div class="form-container">     
+        
+                        <form action="">
+                            <label for="inputPrice" class="label">
+                                <span>Precio del producto</span>
+                            </label>
+                            <input type="number" id="inputPrice" class="inputText">
+                            
+                            <label for="inputDiscount" class="label">
+                                <span>Descuento del producto</span>
+                            </label>
+                            <input type="number" name="" id="inputDiscount" class="inputText">
+
+                            <label for="InputCoupon" class="label">
+                                <span>¿Tienes algun cupon?</span>
+                            </label>
+                            <input type="text" id="InputCoupon" class="inputText">
+
+                            <button type="button" onclick="priceDiscountCoupon()"class="primary-button">
+                                Cupon
+                            </button>
+
+                            <button class="secondary-button" type="button" onclick="priceDiscount()" >
+                                Calcular descuento
+                            </button>
+
+                        </form>
+
+                        <section class="sectionresult">
+                            <h3 id="texto"></h3>
+                            <span id="resultP"></span>
+                        </section>
+                        
+
+                    </div>
+
+                </section>  
+
+        </section>
+    
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="./js/descuentos.js"></script>
+
+</body>
+</html>

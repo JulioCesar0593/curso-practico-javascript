@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:800px)">
+    <script src="https://kit.fontawesome.com/1a1e00d185.js" crossorigin="anonymous"></script>
+    <title>Meedia Moda y Mediana</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-bar__items"> <a href=""><i class="fa-solid fa-house"></i> Home </a></li>
+            </ul>
+        </nav>
+        
+
+
+        <div class="subMenu">
+
+            <div class="subMenu__sections" onclick="location.href='./areas.html'">
+                <!-- <a href="./areas.html">Figuras Geometricas</a> -->
+                <i class="fa-solid fa-ruler"></i> 
+                <span>Figuras geométricas</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="window.location='./descuentos.html'">
+                <i class="fa-solid fa-percent"></i> 
+                <span>Porcentajes y descuentos</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="location.href='./promedios.html'">
+                <i class="fa-regular fa-rectangle-list"></i>
+                <span>Media moda y mediana</span>
+            </div>
+
+            <div class="subMenu__sections" onclick="window.location='./salarios.html'">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                <span>Análisis  salarial</span>
+            </div>
+
+        </div>  
+    </header>
+    
+    <main class="container">
+
+        <section class="content">
+
+            <div class="content-card">
+            
+                <div class="content-head">
+
+                    <h1>Media Moda y Mediana</h1>
+
+                </div>
+
+                <div class="content-body">
+
+                    <div class="form-container">                        
+                        <form >
+
+                            <label for="datos" class="label">
+                                <span >
+                                    Ingresa los valores que desees calcular
+                                </span>
+                            </label>
+                            <input type="number" class="inputValores inputText" id="datos"  onkeypress = "if(event.keyCode === 13){ add() }" required>
+                            <button type="button" id="agregar" class="add" onclick="add()" > <i class="fa-solid fa-plus"></i> </button>
+
+                            <div class="arrayDatos">
+                                <p id="array"></p>
+                            </div>
+                            
+                            <button type="button" class="primary-button" onclick="calculate()">Calcular</button>
+                            <button type="button" class="secondary-button"  onclick="clean()">Nuevo calculo</button>
+                        
+                        </form>
+                    </div>
+
+                    <section class="sectionresult">
+                        <h3>Media</h3>
+                        <span id="media"></span>
+                    </section>
+            
+                    <section class="sectionresult">
+                        <h3>Moda</h3>
+                        <span id="moda"></span>
+                    </section>
+                    
+                    <section class="sectionresult">
+                        <h3>Mediana</h3>
+                        <span id="mediana"></span>
+                    </section>
+                </div>
+
+            </div>
+
+        </section>
+       
+    </main>
+
+    <footer >
+        
+    </footer>
+    <script type="" src="./js/promedios.js" ></script>
+
+</body>
+
+</html>
